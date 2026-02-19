@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- Left panel: input form -->
+  <div class="left-panel">
+    <div class="card">
+      <label for="firstName">Enter First Name</label>
+      <input
+        id="firstName"
+        type="text"
+        placeholder="Enter First Name"
+        [(ngModel)]="firstName"
+      />
+
+      <button class="reset-btn" (click)="reset()">Rest</button>
+    </div>
+  </div>
+
+  <!-- Right panel: image + controls -->
+  <div class="right-panel">
+    <div class="image-frame">
+      <img
+        [src]="currentImage"
+        alt="Spaceship landing on alien planet"
+      />
+    </div>
+
+    <div class="controls">
+      <button (click)="prev()">Prev</button>
+      <button (click)="next()">Next</button>
+      <button (click)="toggleSlide()">Slide</button>
+      <button (click)="stop()">Stop</button>
+    </div>
+  </div>
+</div>
