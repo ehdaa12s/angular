@@ -6,6 +6,7 @@ import { Product } from '../models/product.model';
   providedIn: 'root'
 })
 export class ProductService {
+  [x: string]: any;
 
   private products: Product[] = [
     { id: 1, name: 'iPhone 15', price: 1200, category: 'Electronics' },
