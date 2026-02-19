@@ -8,7 +8,8 @@
 }
 
 .card {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background: #e9ecef;
   padding: 40px;
   border-radius: 30px;
@@ -59,4 +60,5 @@ label {
   color: #6c757d;
   margin-top: 20px;
   line-height: 1.6;
+  text-align: center;
 }

@@ -1,44 +1,39 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';   // ← added for *ngIf
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-temperature-converter',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],   // ← important: CommonModule for *ngIf
   templateUrl: './temperature-converter.component.html',
-  styleUrls: ['./temperature-converter.component.css']
+  styleUrl: './temperature-converter.component.css'
 })
 export class TemperatureConverterComponent {
+  celsius: string = '';
+  fahrenheit: string = '';
 
-  celsius: number | null = -55;
-  fahrenheit: number | null = -67;
+  onCelsiusInput(event: Event): void {
+    const input = (event.target as HTMLInputElement).value;
+    this.celsius = input;
 
-  updatingFromCelsius = false;
-  updatingFromFahrenheit = false;
-
-  onCelsiusChange() {
-    if (this.updatingFromFahrenheit) return;
-    this.updatingFromCelsius = true;
-
-    if (this.celsius !== null) {
-      this.fahrenheit = +(this.celsius * 9 / 5 + 32).toFixed(2);
+    if (input === '' || isNaN(Number(input))) {
+      this.fahrenheit = '';
     } else {
-      this.fahrenheit = null;
+      const c = Number(input);
+      this.fahrenheit = (c * 9/5 + 32).toFixed(2);
     }
-
-    this.updatingFromCelsius = false;
   }
 
-  onFahrenheitChange() {
-    if (this.updatingFromCelsius) return;
-    this.updatingFromFahrenheit = true;
+  onFahrenheitInput(event: Event): void {
+    const input = (event.target as HTMLInputElement).value;
+    this.fahrenheit = input;
 
-    if (this.fahrenheit !== null) {
-      this.celsius = +((this.fahrenheit - 32) * 5 / 9).toFixed(2);
+    if (input === '' || isNaN(Number(input))) {
+      this.celsius = '';
     } else {
-      this.celsius = null;
+      const f = Number(input);
+      this.celsius = ((f - 32) * 5/9).toFixed(2);
     }
-
-    this.updatingFromFahrenheit = false;
   }
 }
