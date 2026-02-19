@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';   // ← added for *ngIf
+import { CommonModule } from '@angular/common';   
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-temperature-converter',
   standalone: true,
-  imports: [CommonModule, FormsModule],   // ← important: CommonModule for *ngIf
+  imports: [CommonModule, FormsModule],   
   templateUrl: './temperature-converter.component.html',
   styleUrl: './temperature-converter.component.css'
 })
@@ -37,3 +37,5 @@ export class TemperatureConverterComponent {
     }
   }
 }
+
+

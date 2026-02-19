@@ -1,0 +1,76 @@
+.notification-stack {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  pointer-events: none; // allows clicks to pass through empty space
+}
+
+.notification {
+  pointer-events: auto;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  animation: slideIn 0.35s ease-out forwards;
+
+  &:hover {
+    opacity: 0.94;
+    transform: translateY(-1px);
+  }
+}
+
+.success { background: #2e7d32; } // darker green
+.error   { background: #c62828; }
+.warning { background: #e65100; }
+.info    { background: #1565c0; }
+
+.type-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-width: 78px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.message {
+  flex: 1;
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 0 4px;
+  margin-left: 8px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

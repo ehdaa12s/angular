@@ -1,0 +1,13 @@
+<div class="notification-stack" aria-live="polite">
+  @for (notification of notifications$ | async; track notification.id) {
+    <div
+      class="notification"
+      [ngClass]="notification.type"
+      (click)="remove(notification.id)"
+    >
+      <span class="type-label">{{ getTypeLabel(notification.type) }}</span>
+      <span class="message">{{ notification.message }}</span>
+      <button class="close-btn" aria-label="Close">✕</button>
+    </div>
+  }
+</div>
