@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card">
+    <h1 class="title">Temperature Converter</h1>
+    <hr />
+
+    <div class="field">
+      <label for="celsius">Celsius (°C)</label>
+      <input
+        id="celsius"
+        class="input"
+        type="number"
+        step="0.01"
+        [value]="celsius"
+        (input)="onCelsiusInput($event)"
+        placeholder="Enter °C"
+      />
+    </div>
+
+    <div class="field">
+      <label for="fahrenheit">Fahrenheit (°F)</label>
+      <input
+        id="fahrenheit"
+        class="input"
+        type="number"
+        step="0.01"
+        [value]="fahrenheit"
+        (input)="onFahrenheitInput($event)"
+        placeholder="Enter °F"
+      />
+    </div>
+
+    
+  </div>
+</div>

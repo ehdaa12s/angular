@@ -1,14 +1,18 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Task2Component } from './component/task2.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, RouterOutlet],
-  templateUrl: './component/task2.component.html',
-  styleUrl: './component/task2.component.css'
+  imports: [FormsModule , Task2Component],
+  templateUrl: 
+  
+  './component/task2.component.html',
+  styleUrl: 
+  './component/task2.component.css'
 })
 export class App {
   protected readonly title = signal('dayone');
@@ -56,4 +60,6 @@ private images = [
   prev(): void {
     this.currentIndex.update(i => (i - 1 + this.images.length) % this.images.length);
   }
+  
+  
 }

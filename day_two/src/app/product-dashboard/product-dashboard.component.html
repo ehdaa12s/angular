@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>Product Dashboard</h1>
+
+  
+  <div class="form-section">
+    <h2>Add a Product</h2>
+    <div class="form-row">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="form().name" placeholder="e.g. Wireless Mouse" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" [(ngModel)]="form().price" placeholder="0.00">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <input matInput [(ngModel)]="form().category" placeholder="e.g. Electronics">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="addProduct()">
+        Add
+      </button>
+    </div>
+  </div>
+
+ 
+  <h2>Products ({{ products().length }})</h2>
+
+  <div class="product-grid">
+    @for (product of products(); track product.id) {
+      <mat-card class="product-card">
+        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>
+          {{ product.category }} • {{ product.price | number:'1.0-0' }} $
+        </mat-card-subtitle>
+        <mat-card-actions align="end">
+          <button mat-icon-button color="warn" (click)="deleteProduct(product.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    } @empty {
+      <div class="empty-message">
+        No products yet — try adding one above
+      </div>
+    }
+  </div>
+</div>

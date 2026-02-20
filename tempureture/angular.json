@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "day_two": {
+    "day_three": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "day_two:build:production"
+              "buildTarget": "day_three:build:production"
             },
             "development": {
-              "buildTarget": "day_two:build:development"
+              "buildTarget": "day_three:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,6 +88,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "58a84696-3f4f-445f-8fd1-a1112ce5b50c"
   }
 }

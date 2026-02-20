@@ -1,0 +1,17 @@
+<main class="container">
+  <app-form
+    [error]="error"
+    [editProduct]="editingProduct"
+    (productAdded)="onProductAdded($event)"
+    (productUpdated)="onProductUpdated($event)"
+    (cancelEdit)="onCancelEdit()"
+  />
+  <app-list
+    [products]="products"
+    [favouriteId]="favouriteProductId"
+    (delete)="onProductDeleted($event)"
+    (favourite)="onProductFavourited($event)"
+    (edit)="onProductEdit($event)"
+  />
+  <app-switch-task />
+</main>

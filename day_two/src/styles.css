@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+/* Custom snackbar classes */
+.success-snackbar {
+  --mdc-snackbar-container-color: #4caf50 !important;
+  --mdc-snackbar-supporting-text-color: white !important;
+  --mdc-snackbar-action-color: white !important;
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: #f44336 !important;
+  --mdc-snackbar-supporting-text-color: white !important;
+}
+
+.warning-snackbar {
+  --mdc-snackbar-container-color: #ff9800 !important;
+  --mdc-snackbar-supporting-text-color: white !important;
+}
+
+.info-snackbar {
+  --mdc-snackbar-container-color: #2196f3 !important;
+  --mdc-snackbar-supporting-text-color: white !important;
+}
+
+/* Card & layout helpers */
+.product-card {
+  width: 240px;
+  margin: 12px;
+}
+
+.favorite {
+  color: #f44336;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
