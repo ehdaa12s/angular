@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <!-- Hero Section -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="card bg-primary text-white shadow-lg" appHighlight="rgba(13, 110, 253, 0.1)">
+        <div class="card-body text-center p-5">
+          <h1 class="display-1 fw-bold mb-4">Welcome to DayFive</h1>
+          <p class="lead fs-3 mb-4">Your modern Angular application with Bootstrap styling</p>
+          <hr class="my-4 bg-white w-25 mx-auto">
+          <p class="fs-5">Experience the power of Angular 20 with Bootstrap 5</p>
+          <div class="mt-5">
+            <a routerLink="/about" class="btn btn-light btn-lg px-5 me-3">Get Started</a>
+            <a routerLink="/login" class="btn btn-outline-light btn-lg px-5">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm" appHighlight="rgba(25, 135, 84, 0.1)">
+        <div class="card-body text-center p-4">
+          <div class="display-1 text-success mb-3">
+            <i class="bi bi-shield-lock"></i>
+          </div>
+          <h3 class="h4 fw-bold">Protected Routes</h3>
+          <p class="text-muted">About page is protected with AuthGuard - login required to access</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm" appHighlight="rgba(13, 110, 253, 0.1)">
+        <div class="card-body text-center p-4">
+          <div class="display-1 text-primary mb-3">
+            <i class="bi bi-boxes"></i>
+          </div>
+          <h3 class="h4 fw-bold">Nested Routing</h3>
+          <p class="text-muted">Products and product details under about section with nested routes</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm" appHighlight="rgba(255, 193, 7, 0.1)">
+        <div class="card-body text-center p-4">
+          <div class="display-1 text-warning mb-3">
+            <i class="bi bi-magic"></i>
+          </div>
+          <h3 class="h4 fw-bold">Custom Directive</h3>
+          <p class="text-muted">Hover over any card to see the appHighlight directive in action</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Section -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card bg-light border-0">
+        <div class="card-body p-5 text-center">
+          <h2 class="fw-bold mb-4">Hover Effect Demo</h2>
+          <p class="mb-4">The <code>appHighlight</code> directive changes background color on hover</p>
+          <div class="alert alert-info d-inline-block">
+            <i class="bi bi-info-circle me-2"></i>
+            Try hovering over any card or this alert!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

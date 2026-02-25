@@ -1,0 +1,110 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-lg border-0" appHighlight="rgba(13, 110, 253, 0.05)">
+        <div class="card-header bg-primary text-white text-center py-4">
+          <h2 class="h3 mb-0 fw-bold">
+            <i class="bi bi-box-arrow-in-right me-2"></i>
+            Login to DayFive
+          </h2>
+        </div>
+        
+        <div class="card-body p-5">
+          <!-- Login Form -->
+          <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+            <!-- Username Field -->
+            <div class="mb-4">
+              <label for="username" class="form-label fw-semibold">
+                <i class="bi bi-person me-2"></i>
+                Username
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-light">
+                  <i class="bi bi-person"></i>
+                </span>
+                <input 
+                  type="text" 
+                  class="form-control form-control-lg"
+                  id="username" 
+                  name="username" 
+                  [(ngModel)]="credentials.username" 
+                  placeholder="Enter your username"
+                  required
+                  #username="ngModel">
+              </div>
+              <div *ngIf="username.invalid && username.touched" class="text-danger mt-2 small">
+                <i class="bi bi-exclamation-circle me-1"></i>
+                Username is required
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label for="password" class="form-label fw-semibold">
+                <i class="bi bi-lock me-2"></i>
+                Password
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-light">
+                  <i class="bi bi-lock"></i>
+                </span>
+                <input 
+                  type="password" 
+                  class="form-control form-control-lg"
+                  id="password" 
+                  name="password" 
+                  [(ngModel)]="credentials.password" 
+                  placeholder="Enter your password"
+                  required
+                  #password="ngModel">
+              </div>
+              <div *ngIf="password.invalid && password.touched" class="text-danger mt-2 small">
+                <i class="bi bi-exclamation-circle me-1"></i>
+                Password is required
+              </div>
+            </div>
+
+            <!-- Error Message -->
+            <div *ngIf="error" class="alert alert-danger" role="alert">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              {{ error }}
+            </div>
+
+            <!-- Hint Box -->
+            <div class="alert alert-info mb-4">
+              <i class="bi bi-info-circle me-2"></i>
+              <strong>Demo Credentials:</strong><br>
+              Username: <code>user</code><br>
+              Password: <code>password</code>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="btn btn-primary btn-lg w-100 py-3 fw-semibold"
+              [disabled]="!loginForm.valid">
+              <i class="bi bi-box-arrow-in-right me-2"></i>
+              {{ loginForm.valid ? 'Login' : 'Please fill all fields' }}
+            </button>
+          </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer bg-light text-center py-3">
+          <small class="text-muted">
+            <i class="bi bi-shield-check me-1"></i>
+            Secure login - Demo purpose only
+          </small>
+        </div>
+      </div>
+
+      <!-- Back to Home Link -->
+      <div class="text-center mt-4">
+        <a routerLink="/home" class="text-decoration-none">
+          <i class="bi bi-arrow-left me-1"></i>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
