@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <!-- 404 Card -->
+      <div class="card border-0 shadow-lg" appHighlight="rgba(255, 193, 7, 0.05)">
+        <div class="card-body text-center p-5">
+          <!-- 404 Illustration -->
+          <div class="mb-4">
+            <span class="display-1 fw-bold text-warning">404</span>
+          </div>
+          
+          <div class="mb-4">
+            <i class="bi bi-compass display-1 text-muted"></i>
+          </div>
+          
+          <h2 class="h3 fw-bold mb-3">Page Not Found</h2>
+          
+          <p class="text-muted mb-4">
+            <i class="bi bi-exclamation-circle me-2"></i>
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a routerLink="/home" class="btn btn-primary btn-lg px-4">
+              <i class="bi bi-house me-2"></i>
+              Go to Home
+            </a>
+            <a routerLink="/about" class="btn btn-outline-secondary btn-lg px-4">
+              <i class="bi bi-info-circle me-2"></i>
+              About Page
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer with helpful links -->
+        <div class="card-footer bg-light text-center py-3">
+          <small class="text-muted">
+            <i class="bi bi-question-circle me-1"></i>
+            Lost? Try these links:
+          </small>
+          <div class="mt-2">
+            <a routerLink="/" class="text-decoration-none me-3">Home</a>
+            <a routerLink="/about" class="text-decoration-none me-3">About</a>
+            <a routerLink="/login" class="text-decoration-none">Login</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Suggestion -->
+      <div class="text-center mt-4">
+        <p class="text-muted">
+          <i class="bi bi-search me-2"></i>
+          Looking for something specific? Check our <a routerLink="/about/products">products page</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

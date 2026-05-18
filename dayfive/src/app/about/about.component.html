@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <!-- Page Header -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card bg-dark text-white">
+        <div class="card-body p-5">
+          <h1 class="display-4 fw-bold mb-3">About Section</h1>
+          <p class="lead mb-0">Welcome to the protected area of our application</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Tabs -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <ul class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" 
+             routerLink="products" 
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-grid me-2"></i>
+            All Products
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Nested Content -->
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
